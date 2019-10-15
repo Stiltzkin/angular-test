@@ -1,0 +1,41 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Simple Table</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Imagem
+                </th>
+                <th>
+                  Nome
+                </th>
+                <th>
+                  Descrição
+                </th>
+                <th class="text-right">
+                  Preço
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let row of listaProdutos">
+                  <td style="width: 15%"><img [src]="row.pictureUrl"></td>
+                  <td>{{ row.name }}</td>
+                  <td>{{ row.description }}</td>
+                  <td>{{ row.price }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
